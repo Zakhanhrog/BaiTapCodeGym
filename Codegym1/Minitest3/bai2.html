@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+
+
+</body>
+</html>
+<script>
+
+  function diemtrungbinh(toan, anh, van) {
+    let dtb = 0;
+    dtb = (toan + anh + van) / 3
+    return dtb;
+  }
+  let math = +prompt("Nhập điểm toán:");
+  let english = +prompt("Nhập điểm tiếng anh:");
+  let literature = +prompt("Nhập điểm ngữ văn:");
+  let result = diemtrungbinh(math, english, literature);
+  document.write(`Điểm trung bình là: ${result}`);
+
+</script>

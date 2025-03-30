@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let a = [2,6,-7,11,4,2,18,-10,16,3];
+  let v = parseInt(prompt("Nhập giá trị để kiểm tra"));
+  let result = false;
+  for (let i = 0; i < a.length; i ++) {
+    if (a[i] == v) {
+      result = true;
+    }
+  }
+  if (result == true) {
+    document.write("V có trong mảng")
+  } else {
+    document.write("V không có trong mảng")
+  }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [2,6,7,11,4,2,18,10,16,3];
+    let max = a[0];
+    let vitri = 0;
+    for (let i = 1; i < a.length; i ++) {
+        if (a[i] > max) {
+            max = a[i];
+            vitri = i;
+        }
+    }
+    document.write(`Giá trị lớn nhất trong mảng là: ${max} tại vị trí a[${vitri}]`);
+</script>

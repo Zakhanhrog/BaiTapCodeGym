@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Square of: <input type="number" id="input" oninput="binhphuong(this.value)" onchange="binhphuong(this.value)">
+Bình phương = <span id="result"></span>
+</body>
+</html>
+<script>
+  function binhphuong(a){
+    let x = a * a;
+    document.getElementById("result").innerHTML = x
+  }
+</script>

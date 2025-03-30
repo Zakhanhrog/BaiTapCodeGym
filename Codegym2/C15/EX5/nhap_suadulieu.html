@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50; /* Màu xanh lá cây */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+        .edit-input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Add product and edit</h1>
+<hr>
+
+<div id="add-product">
+    <h2>Add product</h2>
+    <input type="text" id="new-product-name" placeholder="Name of product">
+    <button onclick="addProduct()">Add</button>
+    <p id="add-message"></p>
+</div>
+
+<div id="edit-product" style="display: none;">
+    <h2>Edit info product </h2>
+    <input type="text" id="edit-product-name" class="edit-input">
+    <button onclick="updateProduct()">Update</button>
+    <button onclick="cancelEdit()">Cancel</button>
+</div>
+
+<table id="product-table">
+    <thead>
+    <tr>
+        <th>Label</th>
+        <th>Name peoduct</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+<script src= "ham_nhapsua_dulieu.js">
+</script>
+
+</body>
+</html>

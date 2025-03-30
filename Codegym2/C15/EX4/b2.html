@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function areaCircle(a,b) {
+        let dientich = a * b
+        return dientich;
+    }
+    function circumferenceCircle2(a,b) {
+        let chuvi = (a + b) * 2;
+        return chuvi;
+    }
+    let a = parseFloat(prompt("Nhập chiều dài: "));
+    let b = parseFloat(prompt("Nhập chiều rộng: "));
+    let result = areaCircle(a,b);
+    document.write(`Diện tích của hình chữ nhật là ${result} <br>`);
+    let result1 = circumferenceCircle2(a,b);
+    document.write(`Chu vi của hình chữ nhật là ${result1}`);
+
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function myFunction(a,b) {
+    if (a > b) {
+      alert("Số thứ nhất lớn hơn số thứ 2");
+      return "Số thứ nhất lớn hơn số thứ 2";
+    } else if (a <= b) {
+      document.write("Tổng 2 số là: ");
+      return a + b;
+    }
+  }
+  let a = +prompt("Nhập giá trị thứ nhất");
+  let b = +prompt("Nhập giá trị thứ hai");
+  let result = myFunction(a, b);
+  document.write(result);
+</script>

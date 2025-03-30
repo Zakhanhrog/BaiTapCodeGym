@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function checkNumber(number){
+    number = parseInt(number);
+    if(number >= 0){
+      return true;
+    }else {
+      return false;
+    }
+  }
+  let input = +prompt("Nhập giá trị: ");
+  let result = checkNumber(input);
+  console.log(result);
+</script>

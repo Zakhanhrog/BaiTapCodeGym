@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>Đổi độ C sang độ F</h2>
+<input type="number" id="1" placeholder="Nhập độ C">
+<button onclick="doc()">Đổi</button>
+<p id="2"></p><br>
+
+<h2>Chuyển từ mét sang feet</h2>
+<input type="number" id="3" placeholder="Nhập số m">
+<button onclick="dom()">Đổi</button>
+<p id="4"></p><br>
+
+<h2>Tính diện tích hình vuông</h2>
+<input type="number" id="5" placeholder="Nhập cạnh">
+<button onclick="dtvuong()">Tính</button>
+<p id="6"></p><br>
+
+<h2>Tính diện tích hình chữ nhật</h2>
+<input type="number" id="width" placeholder="Nhập chiều rộng">
+<input type="number" id="height" placeholder="Nhập chiều dài">
+<button onclick="dtchunhat()">Kiểm tra</button>
+<p id="7"></p><br>
+
+<h2>Tính diện tích tam giác vuông</h2>
+<input type="number" id="8">
+<input type="number" id="9">
+<p>Nhập 2 cạnh góc vuông vào 2 ô trên</p>
+<button onclick="dttamgiac()">Kiểm tra</button>
+<p id="10"></p><br>
+
+<h2>Giải phương trình bậc 1: ax + b = 0</h2>
+<input type="number" id="a" placeholder="Nhập a">
+<input type="number" id="b" placeholder="Nhập b">
+<button onclick="giaiPT()">Giải</button>
+<p id="ketqua"></p><br>
+
+<h2>Giải phương trình bậc 2: ax² + bx + c = 0</h2>
+<input type="number" id="x" placeholder="Nhập a">
+<input type="number" id="y" placeholder="Nhập b">
+<input type="number" id="z" placeholder="Nhập c">
+<button onclick="giaiPTBac2()">Giải</button>
+<p id="ketqua2"></p><br>
+
+<h2>Kiểm tra số nhập vào có phải tuổi 1 người</h2>
+<input type="number" id="11" placeholder="Hãy nhập số tuổi">
+<button onclick="kttuoi()">Kiểm tra</button>
+<p id="12"></p><br>
+
+<h2>Kiểm tra 3 số a,b,c có phải là cạnh của 1 tam giác</h2>
+<input type="number" id="q" placeholder="Nhập a">
+<input type="number" id="w" placeholder="Nhập b">
+<input type="number" id="e" placeholder="Nhập c">
+<button onclick="tamcanh()">Kiểm tra</button>
+<p id="13"></p><br>
+
+<h2>Tính tiền điện theo số kWh tiêu thụ</h2>
+<input type="number" id="kwh" placeholder="Nhập số kWh">
+<button onclick="tinhTienDien()">Tính</button>
+<p id="ketqua3"></p> <br>
+
+<h2>Tính Thuế Thu Nhập Cá Nhân</h2>
+<input type="number" id="thuNhap" placeholder="Nhập thu nhập (VNĐ)">
+<button onclick="tinhThue()">Tính Thuế</button>
+<p id="ketQuaThue"></p><br>
+
+<h2>Tính Lãi Ngân Hàng</h2>
+<input type="number" id="goc" placeholder="Số tiền ban đầu (VNĐ)">
+<input type="number" id="thang" placeholder="Số tháng gửi">
+<input type="number" step="0.001" id="laiSuat" placeholder="Lãi suất (%/tháng)">
+<button onclick="tinhLai()">Tính Lãi</button>
+<p id="ketQuaLai"></p><br>
+
+<script src="CLDK2.js"></script>
+</body>
+</html>

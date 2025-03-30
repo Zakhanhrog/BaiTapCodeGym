@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      text-align: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+<h1>Thử gõ vào ô bên dưới</h1>
+<textarea id="textInput" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+</body>
+</html>
+<script>
+  let x = "Tôi tên là Tú";
+  let y = x.split("");
+  let index = 0;
+
+  function typeTextarea() {
+    let result = document.getElementById("textInput");
+    result.value = y.slice(0, index + 1).join(""); // Cập nhật nội dung textarea
+    if (index < y.length) {
+      index++; // Tăng vị trí lên để nhập ký tự tiếp theo,
+    }else {
+      result.value = "";
+      index = 0;
+    }
+  }
+</script>

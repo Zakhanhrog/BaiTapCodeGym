@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let x = ['t','v','a','c','k','c','r']
+  function checkArr(kytu) {
+    // let vitri = -1
+    let count = 0;
+    for (let i = 0; i < x.length; i++) {
+      if (x[i] === kytu) {
+        // vitri = i;
+        count++;
+        // return `${kytu} nằm ở vị trí thứ ${vitri} trong mảng`;
+      }
+    }
+    if (count > 0){
+      return `${kytu} xuất hiện ${count} trong mảng`;
+    }
+    return -1;
+  }
+  let input = prompt('Nhập vào ký tự để kiểm tra');
+  let result = checkArr(input)
+  document.write(result);
+</script>

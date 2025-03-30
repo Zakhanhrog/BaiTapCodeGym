@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title> B2minitest </title>
+        <style>
+            body { font-family: Arial, sans-serif;}
+            fieldset { margin: auto; border-radius: 5px;}
+            h1 {text-align: center; color: rgb(55, 0, 255);}
+            input, select, option {
+                width: 500px;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border: 1px solid black;
+                border-radius: 5px;
+
+            }
+            input { margin-left: auto; margin-right: auto;}
+            legend { color: #0066ff;}
+        </style>
+    </head>
+<body>
+    <form method="POST" action=" http://demo.codegym.vn/6/registration_form/register.php"/>
+
+        <h1> ĐĂNG KÍ TÀI KHOẢN </h1>
+
+        <fieldset style="width:520px">
+            <legend> <b>Thông tin cá nhân</b> </legend>
+                <b>Họ và tên:</b> <br> <input type="text" name="name" placeholder="Nguyễn Văn A" required><br><br>
+                <b>Email:</b> <br> <input type="Email" name="email" placeholder="example@gmail.com" required><br><br>
+                <b>Số điện thoại:</b> <br> <input type="tel" name="phone" placeholder="0123456789" required><br><br>
+                <b>Mật khẩu:</b> <br> <input type="password" name="password" required><br><br>
+            <b>Giới tính:</b><br>
+            <select name="gender" required>
+                <option value="nam"> Nam </option>
+                <option value="nữ"> Nữ </option>
+                <option value="other"> Other </option>
+            </select>
+
+        </fieldset>
+    <br>
+        <fieldset style="width:520px">
+            <legend> <b>Thông tin bổ sung</b> </legend>
+            <b>Ngày sinh:</b> <input type="date" name="birthday" required><br><br>
+            <b>Nghề nghiệp:</b>
+                <select name="nghenghiep">
+                    <option value="Sinhvien">Sinh viên</option>
+                    <option value="Giáo viên">Giáo viên</option>
+                    <option value="Khác">Khác</option>
+                </select>
+        </fieldset>
+    <br>
+    <fieldset style="border: 0px ; width:520px">
+        <input type="submit" value="Đăng kí" style="background: rgba(20,220,220,0.87); border: 0px "/>
+        <input type="reset" value="Xóa" style="background: rgba(220,20,20,0.87); border: 0px"/>
+    </fieldset>
+    <!-- ketthuc -->
+
+    </form>
+
+</body>
+
+</html>

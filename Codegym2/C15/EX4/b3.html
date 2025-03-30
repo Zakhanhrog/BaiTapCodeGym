@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Tính giai thừa của một số</h1>
+<input type="number" id="input" oninput="tinhGiaiThua(this.value)" placeholder="Nhập một sô nguyên">
+<p id="result"></p>
+</body>
+</html>
+<script>
+  function tinhGiaiThua(a) {
+    let giaithua = 1;
+    for (let i = a; i > 0 ; i--) {
+      giaithua *= i;
+    }
+    document.getElementById("result").innerHTML = `${a}! = ${giaithua}`;
+  }
+</script>

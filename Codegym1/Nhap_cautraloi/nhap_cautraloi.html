@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập câu trả lời</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    .traloicauhoi{
+      width: 400px;
+      padding: 20px;
+      margin: auto;
+      margin-top: 50px;
+      border-radius: 10px;
+      background-color: #cccccc;
+      text-align: center;
+    }
+    form{
+      text-align: center;
+      margin-top: 10px;
+    }
+    button{
+      margin: auto;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.4);
+      width: 70px;
+      height: 25px;
+      border: none;
+      margin-top: 10px;
+    }
+    #answers{
+      width: 320px;
+      height: 25px;
+      margin: auto;
+      margin-top: 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.51);
+      text-align: center;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+<div class="traloicauhoi">
+  <form>
+    Hãy trả lời câu hỏi sau: <br>
+    <b>What is the “official” name of JavaScript ?</b><br>
+    <input id="answers" type="text">
+    <button onclick="traloi()">Trả lời</button>
+  </form>
+</div>
+<script src="nha_cautraloi.js"></script>
+</body>
+</html>

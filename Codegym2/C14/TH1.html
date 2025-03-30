@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function checkConfirm(answer) {
+    let result = "";
+    if (answer == true) {
+      result = "Dữ liệu đã bị xóa";
+    }else {
+      result = "Hủy thao tác xóa";
+    }
+    return result;
+  }
+  let confirmAnswer = confirm("Bạn có mốn xóa dữ liệu không");
+  let theAnswer = checkConfirm(confirmAnswer);
+  alert(theAnswer);
+</script>

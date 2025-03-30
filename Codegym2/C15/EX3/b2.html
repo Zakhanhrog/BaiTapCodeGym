@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+x: <input type="number" id="input" oninput="increaseNumber(this.value)" onchange="increaseNumber(this.value)"> <br><br>
+x++: <span id="result"></span>
+</body>
+</html>
+<script>
+  function increaseNumber(number) {
+    number = parseInt(number);
+    let kq = number + 1;
+    document.getElementById("result").innerHTML = kq
+  }
+</script>

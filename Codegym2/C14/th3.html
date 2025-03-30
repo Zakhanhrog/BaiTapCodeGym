@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function checkMin(arr) {
+    if (arr.length == 0) {
+      return "Mảng rỗng";
+    }
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < min) {
+        min = arr[i];
+      }
+    }
+    return min;
+  }
+  let arr1 = [3, 5, 1, 8, -3, 7, 8]
+  let arr2 = [7, 12, 6, 9, 20, 56, 89]
+  let arr3 = []
+  let arr4 = [0, 0, 0, 0, 0, 0]
+  let a1 = checkMin(arr1);
+  document.write('Giá trị nhỏ nhất của mảng arr1 là ' + a1 + "<br>");
+  let a2 = checkMin(arr2);
+  document.write('Giá trị nhỏ nhất của mảng arr1 là ' + a2 + "<br>");
+  let a3 = checkMin(arr3);
+  document.write('Giá trị nhỏ nhất của mảng arr1 là ' + a3 + "<br>");
+  let a4 = checkMin(arr4);
+  document.write('Giá trị nhỏ nhất của mảng arr1 là ' + a4);
+
+</script>

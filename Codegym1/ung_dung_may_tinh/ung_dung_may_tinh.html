@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            width: 450px;
+            padding: 10px;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 20px;
+            background-color: #00e1ff;
+        }
+
+        #manhinh {
+            height: 40px;
+            width: calc(100% - 20px);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: right;
+            font-size: 24px;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: black;
+            cursor: pointer;
+            background-color: #e0e0e0;
+        }
+
+        .button:active {
+            background-color: #ccc;
+        }
+
+        .function-button {
+            background-color: #d3d3d3;
+        }
+
+        .equals {
+            background-color: #4285f4;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="calculator">
+    <div id="manhinh"></div>
+    <div>
+        <button value="Rad" class="button function-button" >Rad</button>
+        <button class="button function-button" onclick="a2()">D</button>
+        <button class="button function-button" onclick="a3()">x!</button>
+        <button class="button function-button" onclick="a4()">(</button>
+        <button class="button function-button" onclick="a5()">)</button>
+        <button class="button function-button" onclick="a6()">%</button>
+        <button class="button function-button" onclick="a7()">AC</button>
+    </div>
+    <div>
+        <button class="button function-button" onclick="b1()">Inv</button>
+        <button class="button function-button" onclick="b2()">sin</button>
+        <button class="button function-button" onclick="b3()">ln</button>
+        <button class="button" onclick="b4()">7</button>
+        <button class="button" onclick="b5()">8</button>
+        <button class="button" onclick="b6()">9</button>
+        <button class="button function-button" onclick="b7()">÷</button>
+    </div>
+    <div>
+        <button class="button function-button" onclick="c1()">π</button>
+        <button class="button function-button" onclick="c2()">cos</button>
+        <button class="button function-button" onclick="c3()">log</button>
+        <button class="button" onclick="c4()">4</button>
+        <button class="button" onclick="c5()">5</button>
+        <button class="button" onclick="c6()">6</button>
+        <button class="button function-button" onclick="c7()">×</button>
+    </div>
+    <div>
+        <button class="button function-button" onclick="d1()">e</button>
+        <button class="button function-button" onclick="d2()">tan</button>
+        <button class="button function-button" onclick="d3()">√</button>
+        <button class="button" onclick="d4()">1</button>
+        <button class="button" onclick="d5()">2</button>
+        <button class="button" onclick="d6()">3</button>
+        <button class="button function-button" onclick="d7()">-</button>
+    </div>
+    <div>
+        <button class="button function-button" onclick="e1()">Ans</button>
+        <button class="button function-button" onclick="e2()">EXP</button>
+        <button class="button function-button" onclick="e3()">xʸ</button>
+        <button class="button" onclick="e4()">0</button>
+        <button class="button" onclick="e5()">.</button>
+        <button class="button equals" onclick="e6()">=</button>
+        <button class="button function-button" onclick="e7()">+</button>
+    </div>
+    <script src="ung_dung_may_tinh.js"></script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Từ điển Anh - Việt</title>
+</head>
+<body>
+<h2>Từ điển Anh - Việt</h2>
+<input type="text" id="nhapdulieu">
+<button onclick="kiemtraTuDien()">Dịch</button>
+<p id="result"></p>
+
+<script>
+  function kiemtraTuDien() {
+    let dulieu = document.getElementById("nhapdulieu").value.trim().toLowerCase(); // trim(); loại bỏ dấu trắng đầu vào, toLowerCase(): chuẩn hóa chứ thường
+
+    // Danh sách từ vựng (chuyển hết sang chữ thường để đồng bộ)
+    let english = ["hello", "goodbye", "black", "white", "red", "green", "blue", "yellow", "orange"];
+    let tiengviet = ["Xin chào", "Tạm biệt", "Màu đen", "Màu trắng", "Màu đỏ", "Màu xanh lá cây", "Màu xanh da trời", "Màu vàng", "Màu cam"];
+
+    // Kiểm tra nếu không nhập gì
+    if (dulieu === "") {
+      document.getElementById("result").innerHTML = "Vui lòng nhập một từ tiếng Anh.";
+      return;
+    }
+
+    // Tìm vị trí trong danh sách
+    let index = english.indexOf(dulieu);
+
+    // Hiển thị kết quả
+    let kq = (index !== -1) ? "Nghĩa của từ " + english[index] + " là: <b>" + tiengviet[index] + "</b>"
+            : "Từ bạn nhập không có trong từ điển.";
+    document.getElementById("result").innerHTML = kq;
+  }
+</script>
+</body>
+</html>

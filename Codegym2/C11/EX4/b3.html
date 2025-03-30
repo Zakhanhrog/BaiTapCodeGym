@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let kq = "";
+
+
+  for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += "*";
+    }
+    kq += row + "<br>";
+  }
+
+  kq += "<br>";
+
+
+  for (let i = 5; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += "*";
+    }
+    kq += row + "<br>";
+  }
+
+  for (let i = 1; i <= 5; i++) {
+    kq += "&nbsp;".repeat(2 * (5 - i)) + "*".repeat(i) + "<br>";
+  }
+  kq += "<br>";
+
+  for (let i = 5; i >= 1; i--) {
+    kq += "&nbsp;".repeat(2 * (5 - i)) + "*".repeat(i) + "<br>";
+  }
+  document.write(kq);
+</script>

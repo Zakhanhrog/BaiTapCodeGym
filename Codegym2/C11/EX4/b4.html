@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let rong = "";
+  let cao = "";
+  for (let i = 1; i <= 21; i++) {
+    rong += "*";
+    if (i < 6) {
+      cao += "*" + "&nbsp".repeat(2 * (21 - 2)) + "*" + "<br>";
+    }
+  }
+  document.write(rong + "<br>" + cao + rong);
+</script>

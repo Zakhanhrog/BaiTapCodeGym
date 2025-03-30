@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let star1 = ["polaris", "aldebaran", "deneb", "vega", "altair", "dubhe", "regulus"]
+  let constellation = ["ursa minor", "taurus", "cygnus", "lyra", "aquila", "ursa major", "leo"]
+  function star(arr) {
+    let vitri = -1;
+    for (let i = 0; i < star1.length; i++) {
+      if (star1[i] == arr) {
+        vitri = i;
+      }
+    }
+    if (vitri != -1) {
+      document.write(`Sao ${arr} thuộc chòm sao ${constellation[vitri]}`)
+    } else {
+      document.write('Không có trong mảng')
+    }
+  }
+  let input = prompt("Nhập ngôi sao:");
+  input = input.trim().toLowerCase();
+  star(input);
+
+</script>

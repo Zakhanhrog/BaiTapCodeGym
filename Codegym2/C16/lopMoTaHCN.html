@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hcn</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  class HinhChuNhat {
+    height;
+    width;
+    constructor(height, width) {
+      this.height = height;
+      this.width = width;
+    }
+    tinhdientich(){
+      let dienTich= this.height * this.width;
+      return dienTich;
+    }
+    tinhchuvi(){
+      let chuVi= (this.height + this.width) *2;
+      return chuVi;
+     }
+  }
+  let result1 = new HinhChuNhat(7,9);
+  console.log(result1.tinhdientich());
+
+  let result2 = new HinhChuNhat(7,9);
+  console.log(result2.tinhchuvi());
+
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doi_tien_ngoaite</title>
+  <style>
+    table{ border :0px solid black;}
+  </style>
+</head>
+<body>
+
+<table border="0px">
+  <tr>
+    <th colspan="4" align="center"> ĐỔI TIỀN NGOẠI TỆ SANG VNĐ </th>
+  </tr>
+
+  <tr>
+    <th align="center"> Amount </th>
+    <th align="center"> From currency </th>
+    <th align="center"> To currency</th>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <input id="amount" type="number" onchange="doitien()"></td>
+    <td align="center">
+        <select id="tien1">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+        </select>
+    </td>
+    <td align="center">
+        <select id="tien2">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+        </select>
+    </td>
+    <td> <button id="convert" onclick="convert()">Convert</button> </td>
+  </tr>
+
+</table>
+        <p id="ketqua"> Result:</p>
+
+</body>
+<script src="doi_tien_te.js"> </script>
+</html>

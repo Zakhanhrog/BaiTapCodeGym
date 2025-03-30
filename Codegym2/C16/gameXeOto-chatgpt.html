@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dodge Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        #gameContainer {
+            position: relative;
+            width: 400px;
+            height: 600px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid white;
+            background: #3b5bbc;
+        }
+        .car-image {
+            position: absolute;
+            width: 50px;
+            height: auto;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: contain;
+        }
+        .obstacle-image {
+            position: absolute;
+            width: 50px;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+<h1>Car Dodge Game</h1>
+<p>Score: <span id="score">0</span></p>
+<div id="gameContainer">
+    <img id="car" class="car-image" src="carRed.png">
+</div>
+<script>
+    const gameContainer = document.getElementById("gameContainer");
+    let score = 0;
+    let car = document.getElementById("car");
+    let carX = gameContainer.clientWidth / 2 - 25;
+    let obstacles = [];
+    let gameSpeed = 3;
+    let keys = {};
+
+    document.addEventListener("keydown", (e) => keys[e.key] = true);
+    document.addEventListener("keyup", (e) => keys[e.key] = false);
+
+    function update() {
+        if (keys["ArrowLeft"] && carX > 0) carX -= 5;
+        if (keys["ArrowRight"] && carX < gameContainer.clientWidth - 50) carX += 5;
+        car.style.left = carX + "px";
+
+        if (Math.random() < 0.02) {
+            let obs = document.createElement("img");
+            obs.src = "carBlue.png";
+            obs.className = "obstacle-image";
+            obs.style.left = Math.random() * (gameContainer.clientWidth - 50) + "px";
+            obs.style.top = "0px";
+            gameContainer.appendChild(obs);
+            obstacles.push(obs);
+        }
+
+        for (let i = obstacles.length - 1; i >= 0; i--) {
+            let obs = obstacles[i];
+            obs.style.top = (parseInt(obs.style.top) + gameSpeed) + "px";
+            if (parseInt(obs.style.top) > gameContainer.clientHeight) {
+                obs.remove();
+                obstacles.splice(i, 1);
+                score += 10;
+                document.getElementById("score").innerText = score;
+            }
+            if (checkCollision(car, obs)) {
+                alert("Game Over! Your Score: " + score);
+                document.location.reload();
+                return;
+            }
+        }
+    }
+
+    function checkCollision(car, obs) {
+        let carRect = car.getBoundingClientRect();
+        let obsRect = obs.getBoundingClientRect();
+        return carRect.left < obsRect.right &&
+            carRect.right > obsRect.left &&
+            carRect.top < obsRect.bottom &&
+            carRect.bottom > obsRect.top;
+    }
+
+    function gameLoop() {
+        update();
+        requestAnimationFrame(gameLoop);
+     }
+    
+     gameLoop();
+</script>
+</body>
+</html>

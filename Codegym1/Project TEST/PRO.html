@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Button Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #222;
+        }
+
+        .box {
+            position: relative;
+            width: 300px;
+            height: 80px;
+            background: #2d2d39;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+            cursor: pointer;
+            overflow: hidden;
+            border: 8px solid #25252b;
+        }
+
+        .box::before {
+            content: "";
+            position: absolute;
+            top: -5px; /* Extend the border slightly */
+            left: -5px; /* Extend the border slightly */
+            right: -5px; /* Extend the border slightly */
+            bottom: -5px; /* Extend the border slightly */
+            background: linear-gradient(
+                    to right,
+                    rgba(255, 0, 0, 0),
+                    rgba(255, 0, 0, 1),
+                    rgba(0, 255, 255, 1),
+                    rgba(0, 0, 255, 0)
+            ); /* Full border gradient */
+            border-radius: 25px; /* Larger to match the extended border */
+            animation: borderRotate 4s linear infinite;
+            z-index: -1; /* Behind the box content */
+            filter: blur(20px); /* Add a blur effect for the glow */
+        }
+
+        @keyframes borderRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .box span {
+            position: relative;
+            z-index: 1; /* Keep text above the border */
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <span>LOGIN</span>
+</div>
+
+</body>
+</html>

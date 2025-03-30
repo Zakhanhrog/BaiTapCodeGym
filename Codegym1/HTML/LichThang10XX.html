@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 60px;
+      height: 60px;
+      text-align: right;
+      vertical-align: top;
+    }
+    th {
+      background-color: #FFD700;
+      color: white;
+      font-weight: bold;
+    }
+    th:first-child {
+      background-color: #FF4500;
+    }
+    th:last-child {
+      background-color: #1E90FF;
+    }
+    td {
+      position: relative;
+    }
+    .sunday {
+      color: red;
+    }
+    .saturday {
+      color: blue;
+    }
+    .small-text {
+      font-size: 0.6em;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
+    .header-row {
+      color: black;
+      background-color: transparent;
+    }
+    .header-row td {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      border: none;
+    }
+  </style>
+  <title>Calendar</title>
+</head>
+<body>
+
+<h2 style="color: blue;">Tháng 10 - October</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th class="sunday">C.Nhật <br> Sun</th>
+    <th>T.Hai <br> Mon</th>
+    <th>T.Ba <br> Tue</th>
+    <th>T.Tư <br> Wed</th>
+    <th>T.Năm <br> Thu</th>
+    <th>T.Sáu <br> Fri</th>
+    <th class="saturday">T.Bảy <br> Sat</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="sunday">4<sup class="small-text">16</sup></td>
+    <td>5<sup class="small-text">17</sup></td>
+    <td>6<sup class="small-text">18</sup></td>
+    <td>7<sup class="small-text">19</sup></td>
+    <td>8<sup class="small-text">20</sup></td>
+    <td>9<sup class="small-text">21</sup></td>
+    <td class="saturday">3<sup class="small-text">15</sup></td>
+  </tr>
+  <tr>
+    <td class="sunday">11<sup class="small-text">23</sup></td>
+    <td>12<sup class="small-text">24</sup></td>
+    <td>13<sup class="small-text">25</sup></td>
+    <td>14<sup class="small-text">26</sup></td>
+    <td>15<sup class="small-text">27</sup></td>
+    <td>16<sup class="small-text">28</sup></td>
+    <td class="saturday">10<sup class="small-text">22</sup></td>
+  </tr>
+  <tr>
+    <td class="sunday">18<sup class="small-text">1,9</sup></td>
+    <td>19<sup class="small-text">2</sup></td>
+    <td>20<sup class="small-text">3</sup></td>
+    <td>21<sup class="small-text">4</sup></td>
+    <td>22<sup class="small-text">5</sup></td>
+    <td>23<sup class="small-text">6</sup></td>
+    <td class="saturday">17<sup class="small-text">29</sup></td>
+  </tr>
+  <tr>
+    <td class="sunday">25<sup class="small-text">8</sup></td>
+    <td>26<sup class="small-text">9</sup></td>
+    <td>27<sup class="small-text">10</sup></td>
+    <td>28<sup class="small-text">11</sup></td>
+    <td>29<sup class="small-text">12</sup></td>
+    <td>30<sup class="small-text">13</sup></td>
+    <td class="saturday">24<sup class="small-text"></sup></td>
+  </tr>
+  <tr>
+    <td class="sunday"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="saturday">31<sup class="small-text">14</sup></td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

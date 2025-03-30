@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // Khai báo và khởi tạo chuỗi đầu vào
+  var str = prompt("Nhập vào một chuỗi");
+
+  // Định nghĩa các hằng số chứa bảng chữ cái in hoa và in thường
+  var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+  // Khởi tạo một mảng để lưu kết quả
+  var result = [];
+
+  // Duyệt qua từng ký tự trong chuỗi đầu vào
+  for (var x = 0; x < str.length; x++) {
+    // Kiểm tra nếu ký tự hiện tại là chữ in hoa
+    if (UPPER.indexOf(str[x]) !== -1) {
+      // Chuyển chữ in hoa thành chữ thường và thêm vào mảng kết quả
+      result.push(str[x].toLowerCase());
+    }
+    // Kiểm tra nếu ký tự hiện tại là chữ in thường
+    else if (LOWER.indexOf(str[x]) !== -1) {
+      // Chuyển chữ in thường thành chữ in hoa và thêm vào mảng kết quả
+      result.push(str[x].toUpperCase());
+    }
+    // Nếu ký tự không phải chữ cái, giữ nguyên và thêm vào mảng kết quả
+    else {
+      result.push(str[x]);
+    }
+  }
+
+  // Xuất kết quả sau khi chuyển đổi
+  document.write(result.join(''));
+
+</script>
+
+
+
+<!--<script>-->
+<!--    function chuyenDoiChu(chuoi) {-->
+<!--        let chuoiMoi = "";-->
+<!--        for (let i = 0; i < chuoi.length; i++) {-->
+<!--            const kyTu = chuoi[i];-->
+<!--            if (kyTu >= 'a' && kyTu <= 'z') {-->
+<!--                chuoiMoi += kyTu.toUpperCase();-->
+<!--            } else if (kyTu >= 'A' && kyTu <= 'Z') {-->
+<!--                chuoiMoi += kyTu.toLowerCase();-->
+<!--            } else {-->
+<!--                chuoiMoi += kyTu; // Giữ nguyên các ký tự không phải chữ cái-->
+<!--            }-->
+<!--        }-->
+<!--        return chuoiMoi;-->
+<!--    }-->
+<!--    // Lấy chuỗi nhập vào từ người dùng (ví dụ: sử dụng prompt trong trình duyệt)-->
+<!--    const chuoiNhap = prompt("Nhập vào một chuỗi:");-->
+<!--    if (chuoiNhap !== null) {-->
+<!--        const chuoiDaChuyenDoi = chuyenDoiChu(chuoiNhap);-->
+<!--        console.log("Chuỗi sau khi chuyển đổi:", chuoiDaChuyenDoi);-->
+<!--    } else {-->
+<!--        console.log("Không có chuỗi nào được nhập.");-->
+<!--    }-->
+<!--    // Ví dụ sử dụng trực tiếp trong code:-->
+<!--    const chuoiViDu = "Hello World 123";-->
+<!--    const chuoiDaChuyenDoiViDu = chuyenDoiChu(chuoiViDu);-->
+<!--    console.log("Chuỗi ví dụ sau khi chuyển đổi:", chuoiDaChuyenDoiViDu); // Kết quả: hELLO wORLD 123-->
+<!--</script>-->

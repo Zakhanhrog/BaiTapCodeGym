@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doi do k sang c</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  class DoiNhietDo{
+    doC;
+    doK;
+    doF;
+    constructor(doC,doK,doF) {
+      this.doC = doC;
+      this.doK = doK;
+      this.doF = doF;
+    }
+    from_C_to_F(){
+      let C_F = (this.doC*9)/5 + 32;
+      return C_F;
+    }
+    from_C_to_K(){
+      let C_K = this.doC + 273.15;
+      return C_K;
+    }
+  }
+  let resultChange = new DoiNhietDo(+prompt("Hay nhap nhiet do (do C)"));
+  document.write(resultChange.from_C_to_F());
+  document.write("<br>");
+  document.write(resultChange.from_C_to_K());
+
+
+
+</script>

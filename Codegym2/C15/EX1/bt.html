@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function isPalindrome(s){
+    let arr = s.split('');
+    let result = false;
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = arr.length - 1; j >= 0; j--) {
+        if (arr[i] == arr[j]) {
+          result = true;
+        } else {
+          result = false;
+        }
+      }
+    }
+    if (result == true) {
+      return `${s} là chuỗi đối xứng`;
+    } else {
+      return `${s} không phải chuỗi đối xứng`;
+    }
+  }
+  let a = prompt("Nhập và một chuỗi");
+  let x = isPalindrome(a);
+  document.write(x);
+</script>

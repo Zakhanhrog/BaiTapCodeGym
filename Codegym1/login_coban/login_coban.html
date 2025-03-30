@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login cơ bản</title>
+  <script src="login_coban.js"></script>
+</head>
+<style>
+  body{
+    font-family: Arial;
+    align-items: center;
+  }
+  .login-box{
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: bisque;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 10px #888888;
+   
+  }
+  .nhap{
+    width: 250px;
+    height: 28px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  form{
+    text-align: center;
+    margin-top: 10px;
+
+  }
+  .TextLogin{
+    width: fit-content(clamp(30px, 70%, 50px));
+    height: fit-content(clamp(20px, 100%, 50px));
+    background-color: rgba(0, 225, 255, 0.81);
+    margin: auto;
+    font-size: 30px;
+  }
+  button{
+    width: 90px;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 5px 5px 5px #888888;
+  }
+
+</style>
+<body>
+<div class="login-box">
+  <div class="TextLogin" >
+    <b>ĐĂNG NHẬP</b>
+    </div>
+  <form>
+    <b>Username:  </b>
+    <input class="nhap" id="username" type="text" onchange="yeucau()" required>
+
+    <b>Password: </b>
+    <input class="nhap" type="text" id="password" required>
+    <button id="xacnhan" onclick="LOGIN()" type="submit"><b>Đăng nhập</b></button>
+    <button id="reset" onclick="reset()" type="reset"><b>Nhập lại</b></button>
+  </form>
+
+
+</div>
+
+</body>
+</html>

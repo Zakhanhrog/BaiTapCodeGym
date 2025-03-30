@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">                                                                                              <! -- HTML -->
+    <title> Form and Table </title>
+</head>
+<body>
+    <H1> GIA KHANH C02 </H1>                                                                                     <! -- Tiêu đề -->
+    <p> Ngô Gia Khánh - Web developer - Trainer: KieuAnh </p>                                                           <! -- tạo form mới -->
+    <form method="POST" action="http://demo.codegym.vn/6/registration_form/register.php"/>
+        <input type="hidden" name="tokenc02zakhanh" id="tokenc02zakhanh">                                               <! -- Thêm nội dung gửi sever không hiện trên web -->
+        <fieldset style="width:420px">                                                                                  <! -- Tạo 1 vùng độc lập -->
+            <legend> 1.Infomation and rank </legend>                                                                    <! -- tên field -->
+        <table style="width:90%">                                                                                       <! -- Tạo table -->
+            <tr>
+                <th> Rank </th>
+                <th> Info </th>
+                <th> Code </th>
+            </tr>
+            <tr>
+                <td align="middle"> 1 </td>
+                <td> <input type="text" name="info" required> </td>
+                <td> <input type="password" name="code1" required > </td>
+            </tr>
+            <tr>
+                <td align="middle"> 2 </td>
+                <td> <input type="text" name="info" required> </td>
+                <td> <input type="password" name="code2" required > </td>
+            </tr>
+            <tr>
+                <td align="middle"> 3 </td>
+                <td> <input type="text" name="info" required> </td>
+                <th> <input type="password" name="code3" required> </th>
+            </tr>
+            <tr>
+                <td rowspan="2" align="middle"> 4 </td>
+                <td> <input type="text" name="info" required> </td>
+                <td rowspan="2"> <input type="password" name="code3" required > </td>
+            </tr>
+            <tr>
+                <td> <input type="text" name="info" required> </td>
+            </tr>
+            <tr>
+                <td align="middle"> Note </td>
+                <td colspan="2" align="middle"> <input type="text" name="note"></td>
+            </tr>
+        </table>                                                                                                        <! -- end table -->
+            <input type="submit" value="Submit" required>
+        </fieldset>
+        <fieldset style="width:420px">
+            <legend> 2.Interests and habits </legend>
+            <table style="width:90%">
+                <tr>
+                    <th> Name </th>
+                    <th> Interests and habits </th>
+                    <th> Other </th>
+                </tr>
+                <tr>
+                    <td> Khanh </td>
+                    <td>
+                        <label><input type="checkbox" name="hobby" value="travel">Travel</label> <br>
+                        <label><input type="checkbox" name="hobby" value="reading">Reading</label> <br>
+                        <label><input type="checkbox" name="hobby" value="sports">Sport</label> <br>
+                        <input type="reset" value="Reset">
+                    </td>
+                    <td> <input type="text" name="hobby" value="Don't have"></td>
+                </tr>
+                <tr>
+                    <td> Hieu </td>
+                    <td>
+                        <label><input type="checkbox" name="hobby" value="travel">Travel</label> <br>
+                        <label><input type="checkbox" name="hobby" value="reading">Reading</label> <br>
+                        <label><input type="checkbox" name="hobby" value="sports">Sport</label> <br>
+                        <input type="reset" value="Reset">
+                    </td>
+                    <td> <input type="text" name="hobby" value="Don't have"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Send"/>
+
+        </fieldset>
+        <fieldset style="width:420px">
+            <legend> 3. Address </legend>
+            <table style="width:90%">
+                <tr>
+                    <th> Name </th>
+                    <th> Address </th>
+                </tr>
+                <tr>
+                    <td align="middle"> Khanh </td>
+                    <td align="middle">
+                        <select name="city">
+                            <option value="Thailand">Thailand</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="middle"> Hieu </td>
+                    <td align="middle">
+                        <select name="city">
+                            <option value="Thailand">Thailand</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Send"/>
+        </fieldset>
+    <label for="avatar">Image</label>
+    <input type="file" id="avatar" name="avatar">
+    </form>
+</body>
+</html>

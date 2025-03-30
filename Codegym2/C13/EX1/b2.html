@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let x = prompt("Nhập vào một chuỗi");
+  let result = []; //thêm chuỗi mới để them dấu -
+  for (i = 0; i < x.length; i++) {
+    if (parseInt(x[i]) % 2 == 0 && parseInt(x[i-1]) % 2 == 0) { //chuyển sang dạng số nguyên để kiểm tra xem chia hết cho 2 không
+      result += "-"
+    }
+    result += x[i];
+  }
+  document.write(result);
+</script>

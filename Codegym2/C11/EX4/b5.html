@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+<script>
+  let lai = 0;
+  do {
+    let tiengoc = parseFloat(prompt("Nhập số tiền gốc: "));
+    let sothang = parseFloat(prompt("Số tháng cho vay: "));
+    let laisuat = parseFloat(prompt("Lãi suất hàng tháng: "));
+    if (tiengoc > 0 && sothang > 0 && laisuat > 0){
+      lai = tiengoc * (1 + laisuat)**sothang;
+      document.write(lai.toFixed(2));
+    }
+  } while (tiengoc < 0 || sothang < 0 || laisuat < 0);
+
+</script>
+</body>
+</html>
